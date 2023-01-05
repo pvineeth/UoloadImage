@@ -1,0 +1,57 @@
+﻿@model BookModel
+<form method="post">
+	<div class="form-group">
+
+		<label asp-for="Title">Title</label>
+		<input asp-for="Title" class="form-control" />
+		<span asp-validation-for="Title" class="text-danger"></span>
+
+	</div>
+	<div class="form-group">
+
+		<label asp-for="Author">Author</label>
+		<input asp-for="Author" class="form-control" />
+		<span asp-validation-for="Author" class="text-danger"></span>
+
+	</div>
+	<div class="form-group">
+
+		<label asp-for="Description">Description</label>
+		<input asp-for="Description" class="form-control" />
+		<span asp-validation-for="Description" class="text-danger"></span>
+
+	</div>
+	<div class="form-group">
+
+		<label asp-for="Category">Category</label>
+		<input asp-for="Category" class="form-control" />
+		<span asp-validation-for="Category" class="text-danger"></span>
+
+
+	</div>
+	<div class="form-group">
+
+		<label asp-for="LanguageID">Language</label>
+		<select asp-for="LanguageID" class="form-control" asp-items="ViewBag.language">
+			<option value="">Please chooose your Language</option>
+
+		</select>
+		<span asp-validation-for="LanguageID" class="text-danger"></span>
+	</div>
+	<div class="form-group">
+
+		<label asp-for="Totalpages">Totalpages</label>
+		<input asp-for="Totalpages" class="form-control" />
+		<span asp-validation-for="Totalpages" class="text-danger"></span>
+
+	</div>
+	<div class="for-group">
+		<label asp-for="Coverphoto"></label><br />
+		<input asp-for="Coverphoto" type="file" id="img" name="img" accept="image/*">
+
+	</div>
+	<div class="form-group" style="padding-top:20px">
+
+		<input type="submit" value="AddBook" class="btn btn-primary" />
+	</div>
+</form>
